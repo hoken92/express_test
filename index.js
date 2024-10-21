@@ -3,7 +3,9 @@ const app = express();
 const PORT = 3000;
 const morgan = require("morgan");
 
+// Morgan middleware
 app.use(morgan("tiny"));
+app.use(express.static("./assets"));
 
 // register view engine
 app.set("view engine", "ejs");
@@ -18,6 +20,10 @@ app.get("/form", (req, res) => {
 
 app.route("/submit-form").post((req, res) => {
   res.send("Success!");
+});
+
+app.get("/download-img", (req, res) => {
+  res.download("./assets/images/IMG_1557.JPG");
 });
 
 app.listen(PORT, (req, res) => {
