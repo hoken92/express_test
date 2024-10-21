@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="/"><h1>Home</h1></a>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/form">Form</a></li>
+      </ul>
+    </nav>
+
+    <div id="app">
+      <form action="/submit-form" method="post">
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
